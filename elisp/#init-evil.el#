@@ -1,0 +1,21 @@
+use-package evil
+;;  :defer    ;; don't block emacs when starting, load evil immediately after startup
+  :init
+  (setq evil-insert-state-cursor '((bar . 3) "red")
+	evil-normal-state-cursor '(box "white")
+	evil-replace-state-cursor '((hbar . 4) "yellow")
+	evil-visual-state-cursor '((hbar. 4) "blue")
+	evil-motion-state-cursor '((hbar .2) "blue")
+	evil-emacs-state-cursor '(hollow "black"))
+  (setq evil-want-integration nil) ;; required by evil-collection
+  (setq evil-search-module 'evil-search)
+  (setq evil-ex-complete-emacs-commands nil)
+  (setq evil-vsplit-window-right t) ;; like vim's 'splitright'
+  (setq evil-split-window-below t) ;; like vim's 'splitbelow'
+  (setq evil-shift-round nil)
+  (setq evil-want-C-u-scroll t)
+  :config
+  (evil-mode 1))
+ 
+(provide 'init-evil)
+ 

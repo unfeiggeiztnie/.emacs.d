@@ -1,0 +1,13 @@
+# .gitignore as a white-list
+# https://jasonstitt.com/gitignore-whitelisting-patterns
+
+# First: ignore everything
+*
+# but un-ignore directories
+!*/
+# recursively allow files under elisp and elpa
+!/elisp/**
+# and specifically include
+!.gitignore
+!init.el
+
